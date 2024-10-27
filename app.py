@@ -31,6 +31,11 @@ try:
     for paciente in lista_pacientes:
         paciente()  # Executa o método __call__, que adiciona o paciente ao banco
 
+    """paciente = Paciente.proximo_paciente()
+    print(f"Chamando {paciente.nome()} para atendimento (Prioridade: {paciente.prioridade()})")
+    paciente = Paciente.proximo_paciente()
+    print(f"Chamando {paciente.nome()} para atendimento (Prioridade: {paciente.prioridade()})")"""
+
     # Chama pacientes para atendimento conforme a prioridade e a hora de chegada
     while True:
         proximo = Paciente.proximo_paciente()

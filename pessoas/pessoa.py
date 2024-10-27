@@ -148,6 +148,28 @@ class Paciente:
         Returns:
             Paciente | None: Próximo paciente a ser atendido ou None se a fila estiver vazia.
         """
+        """if not cls.chamada:
+            pacientes = cls.recuperar_pacientes()
+            pacientes_objetos = [cls(nome=paciente[1], sintomas=paciente[2], prioridade=paciente[3])
+                                 for paciente in pacientes]
+            pacientes_objetos.sort()
+            cls.lista_paciente = pacientes_objetos.copy()
+            cls.chamada = True
+            if cls.lista_paciente:  # Se houver pacientes
+                paciente = cls.lista_paciente[0]  # O primeiro paciente na lista
+                # Remove o paciente chamado do banco
+                return cls.lista_paciente.pop(0)  # Passa o nome do paciente para remover
+            else:
+                print("Não há pacientes na fila.")
+                return None
+        else:
+            if cls.lista_paciente:  # Se houver pacientes
+                paciente = cls.lista_paciente[0]  # O primeiro paciente na lista
+                # Remove o paciente chamado do banco
+                return cls.lista_paciente.pop(0)  # Passa o nome do paciente para remover
+            else:
+                print("Não há pacientes na fila.")
+                return None"""
         if not cls.chamada:
             pacientes = cls.recuperar_pacientes()  # Obtém pacientes da data atual
             if not pacientes:  # Verifica se a lista está vazia
