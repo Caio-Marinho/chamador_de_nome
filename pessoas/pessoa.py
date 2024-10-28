@@ -21,10 +21,9 @@ class Paciente:
         """
         Inicializa um novo objeto Paciente.
 
-        Args:
-            nome (str): Nome do paciente.
-            sintomas (str): Descrição dos sintomas do paciente.
-            prioridade (int): Nível de prioridade do paciente (1 a n).
+        Args: nome (str): Nome do paciente.
+        Args: Sintomas (str): Descrição dos sintomas do paciente.
+        Args: Prioridade (int): Nível de prioridade do paciente (1 a n).
         """
         self.__nome = nome
         self.__sintomas = sintomas
@@ -141,7 +140,7 @@ class Paciente:
             print(f"Falha na conexão : {erro}")
 
     @classmethod
-    def proximo_paciente(cls) -> 'Paciente' | None:
+    def proximo_paciente(cls) -> 'Paciente' or None:
         """
         Retorna o próximo paciente a ser atendido com base na prioridade.
 
@@ -160,7 +159,6 @@ class Paciente:
                 # Remove o paciente chamado do banco
                 return cls.lista_paciente.pop(0)  # Passa o nome do paciente para remover
             else:
-                print("Não há pacientes na fila.")
                 return None
         else:
             if cls.lista_paciente:  # Se houver pacientes
@@ -168,12 +166,10 @@ class Paciente:
                 # Remove o paciente chamado do banco
                 return cls.lista_paciente.pop(0)  # Passa o nome do paciente para remover
             else:
-                print("Não há pacientes na fila.")
                 return None"""
         if not cls.chamada:
             pacientes = cls.recuperar_pacientes()  # Obtém pacientes da data atual
             if not pacientes:  # Verifica se a lista está vazia
-                print("Não há pacientes na fila.")
                 return None
 
             # Converte tuplas em objetos Paciente para manipulação
@@ -186,5 +182,4 @@ class Paciente:
         if cls.lista_paciente:
             return cls.lista_paciente.pop(0)  # Retorna o próximo paciente
         else:
-            print("Não há pacientes na fila.")
             return None

@@ -25,7 +25,8 @@ try:
         Paciente("João", "Dor no peito", 1),  # Adiciona paciente João
         Paciente("Maria", "Febre alta", 2),   # Adiciona paciente Maria
         Paciente("Ana", "Dor de cabeça leve", 3),  # Adiciona paciente Ana
-        Paciente("Carlos", "Fratura exposta", 1)   # Adiciona paciente Carlos
+        Paciente("Carlos", "Fratura exposta", 1),  # Adiciona paciente Carlos
+        Paciente("Caio", "Febre alta", 2)   # Adiciona paciente Caio
     ]
     # Adiciona todos os pacientes da lista ao banco de dados
     for paciente in lista_pacientes:

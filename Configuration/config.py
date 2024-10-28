@@ -8,9 +8,9 @@ class Configuracion:
         # Configurações para acessar o banco de dados
         self.config: dict = {
             'MySQL': {
-                'user': 'Usuario',  # Usuário do banco de dados MySQL
-                'password': 'Senha',  # Senha do banco de dados MySQL
-                'host': 'HOST_DE_ACESSO',  # Host do banco de dados MySQL
-                'port': 'PORTA_DE_ACESSO'  # Porta de conexão do banco de dados MySQL
+                'user': 'USUARIO',  # Usuário do banco de dados MySQL
+                'password': 'SENHA',  # Senha do banco de dados MySQL
+                'host': 'HOST',  # Host do banco de dados MySQL
+                'port': 'PORTA'  # Porta de conexão do banco de dados MySQL
             }
         }
